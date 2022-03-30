@@ -9,7 +9,7 @@ if(isset($_POST['valider'])){
         
         if($input_usr_name == $default_usr_name AND $input_passwd == $default_passwd){
             $_SESSION['passwd'] = $input_passwd;
-            header('Location: index.php');
+            header('Location: index.html');
 
         }else{
             echo "Your user name or password is incorrect";
@@ -30,7 +30,7 @@ if(isset($_POST['valider'])){
 <body>
     SIGN IN
     <nav>
-        <a href="index.php">Home</a>
+        <a href="index.html">Home</a>
     </nav>
     <form method="POST" action="" align="center">
         <input type="text" name="pseudo" autocomplete="off">
