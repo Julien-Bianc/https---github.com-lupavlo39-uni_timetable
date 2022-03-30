@@ -5,7 +5,7 @@ if(isset($_POST['valider'])){
         $default_passwd = "admin1234";
 
         $input_usr_name = htmlspecialchars($_POST['pseudo']);
-        $input_passwd = htmlspecialchars$_POST['passwd']);
+        $input_passwd = htmlspecialchars($_POST['passwd']);
         
         if($input_usr_name == $default_usr_name AND $input_passwd == $default_passwd){
             $_SESSION['passwd'] = $input_passwd;
@@ -28,6 +28,10 @@ if(isset($_POST['valider'])){
     <meta charset="utf-8">
 </head>
 <body>
+    SIGN IN
+    <nav>
+        <a href="index.php">Home</a>
+    </nav>
     <form method="POST" action="" align="center">
         <input type="text" name="pseudo" autocomplete="off">
         <br>

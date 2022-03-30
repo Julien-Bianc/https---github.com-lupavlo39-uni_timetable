@@ -6,5 +6,8 @@
 </head>
 <body>
     HOME
+    <nav>
+    <a href="connexion.php">Sign in</a>
+    </nav>
 </body>
 </html>
