@@ -1,0 +1,37 @@
+*{
+    font-family: "Lato", sans-serif;
+    font-family: "Oswald", sans-serif;
+}
+
+body{
+    background-image: url(https://en.cite-espace.com/assets/images/backgrounds/practical-informations__header.jpg);
+}
+
+
+.logo{
+    font-size: x-large;
+    color: aliceblue;
+}
+
+.choose{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 50px;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    bottom: -250px;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(144, 0, 255);
+}
+
