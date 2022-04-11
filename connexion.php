@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST['valider'])){
     if(!empty($_POST['pseudo']) AND !empty($_POST['passwd'])){
         $default_usr_name = "admin";
@@ -9,7 +10,7 @@ if(isset($_POST['valider'])){
         
         if($input_usr_name == $default_usr_name AND $input_passwd == $default_passwd){
             $_SESSION['passwd'] = $input_passwd;
-            header('Location: index.html');
+            header('Location: index.php');
 
         }else{
             echo "Your user name or password is incorrect";
@@ -30,7 +31,7 @@ if(isset($_POST['valider'])){
 <body>
     SIGN IN
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
     </nav>
     <form method="POST" action="" align="center">
         <input type="text" name="pseudo" autocomplete="off">

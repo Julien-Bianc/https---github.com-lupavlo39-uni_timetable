@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!$_SESSION['passwd']){
+    header('Location: connexion.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
