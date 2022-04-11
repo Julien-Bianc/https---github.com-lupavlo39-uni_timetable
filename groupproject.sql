@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 01 avr. 2022 à 20:41
+-- Généré le :  lun. 11 avr. 2022 à 11:38
 -- Version du serveur :  5.7.17
 -- Version de PHP :  5.6.30
 
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `groupproject`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `admin`
+--
+
+CREATE TABLE `admin` (
+  `IDAdmin` int(10) NOT NULL,
+  `PassWord` varchar(30) NOT NULL,
+  `LastName` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `admin`
+--
+
+INSERT INTO `admin` (`IDAdmin`, `PassWord`, `LastName`) VALUES
+(1000000, 'admin1234', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -122,32 +141,6 @@ INSERT INTO `room` (`TypeRoom`, `NumRoom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `staff`
---
-
-CREATE TABLE `staff` (
-  `IDStaff` int(20) NOT NULL,
-  `LastName` varchar(30) NOT NULL,
-  `#IDModule` int(20) NOT NULL,
-  `#IDModule2` int(20) NOT NULL,
-  `#IDModule3` int(20) NOT NULL,
-  `#IDModule4` int(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `staff`
---
-
-INSERT INTO `staff` (`IDStaff`, `LastName`, `#IDModule`, `#IDModule2`, `#IDModule3`, `#IDModule4`) VALUES
-(1001, 'Pepe', 3042, 1042, 1045, 2045),
-(1002, 'Odegaard', 2043, 1043, 1046, 3045),
-(1003, 'Walker', 1041, 3041, 2044, 1044),
-(1004, 'Roni', 2041, 3043, 3046, 2046),
-(1005, 'Payet', 2042, 2041, 3044, 3042);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `student`
 --
 
@@ -168,6 +161,32 @@ INSERT INTO `student` (`ID`, `LastName`, `#IDProgramme`) VALUES
 (22004304, 'Pogboum', 2000),
 (23004305, 'Grisemine', 3000),
 (23004306, 'Vacrane', 3000);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `teacher`
+--
+
+CREATE TABLE `teacher` (
+  `IDStaff` int(20) NOT NULL,
+  `LastName` varchar(30) NOT NULL,
+  `#IDModule` int(20) NOT NULL,
+  `#IDModule2` int(20) NOT NULL,
+  `#IDModule3` int(20) NOT NULL,
+  `#IDModule4` int(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `teacher`
+--
+
+INSERT INTO `teacher` (`IDStaff`, `LastName`, `#IDModule`, `#IDModule2`, `#IDModule3`, `#IDModule4`) VALUES
+(1001, 'Pepe', 3042, 1042, 1045, 2045),
+(1002, 'Odegaard', 2043, 1043, 1046, 3045),
+(1003, 'Walker', 1041, 3041, 2044, 1044),
+(1004, 'Roni', 2041, 3043, 3046, 2046),
+(1005, 'Payet', 2042, 2041, 3044, 3042);
 
 --
 -- Index pour les tables déchargées
@@ -192,16 +211,16 @@ ALTER TABLE `room`
   ADD PRIMARY KEY (`NumRoom`);
 
 --
--- Index pour la table `staff`
---
-ALTER TABLE `staff`
-  ADD PRIMARY KEY (`IDStaff`);
-
---
 -- Index pour la table `student`
 --
 ALTER TABLE `student`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `teacher`
+--
+ALTER TABLE `teacher`
+  ADD PRIMARY KEY (`IDStaff`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -218,9 +237,9 @@ ALTER TABLE `modules`
 ALTER TABLE `room`
   MODIFY `NumRoom` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 --
--- AUTO_INCREMENT pour la table `staff`
+-- AUTO_INCREMENT pour la table `teacher`
 --
-ALTER TABLE `staff`
+ALTER TABLE `teacher`
   MODIFY `IDStaff` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1006;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
