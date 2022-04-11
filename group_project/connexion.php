@@ -1,5 +1,7 @@
 <?php
 session_start();
+$database = new PDO('mysql:host=localhost;dbname=groupproject', 'root', '');
+
 if(isset($_POST['valider'])){
     if(!empty($_POST['pseudo']) AND !empty($_POST['passwd'])){
         $default_usr_name = "admin";
@@ -13,11 +15,11 @@ if(isset($_POST['valider'])){
             header('Location: index.php');
 
         }else{
-            echo "Your user name or password is incorrect";
+            echo "Your user name or password is incorrect<br>";
         }
     }
     else{
-        echo "Sign in :";
+        echo "Please complete the fields<br>";
     }
 }
 ?>

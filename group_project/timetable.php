@@ -2,7 +2,6 @@
     <article>
         <table border="2" style= "background-color: #FFFFFF; color: #000000; margin: 0 auto;" >
               <tr>
-                <th><b>TIME</b></th>
                 <th><b>Monday</b></th>
                 <th><b>Tuesday</b></th>
                 <th><b>Wednesday</b></th>
@@ -11,6 +10,9 @@
               </tr>
             <tbody>
                 <h1>Class Wise Time Table</h1>
+                <nav>
+                    <a href="index.php">Home</a>
+                </nav>
                 <?php/*
                     $days_data = array();
                     while($row = mysqli_fetch_assoc($res)){
