@@ -9,7 +9,7 @@ body{
 
 
 .logo{
-    font-size: x-large;
+    font-size: xx-large;
     color: aliceblue;
 }
 
@@ -24,6 +24,19 @@ body{
     position: relative;
     text-align: center;
     bottom: -250px;
+}
+
+.adminarea{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 50px;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: right;
+    bottom: -700px;
 }
 
 a {
