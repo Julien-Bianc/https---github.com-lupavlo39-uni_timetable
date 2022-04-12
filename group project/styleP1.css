@@ -1,0 +1,65 @@
+*{
+    font-family: "Lato", sans-serif;
+    font-family: "Oswald", sans-serif;
+}
+
+body{
+    background-image: url(https://en.cite-espace.com/assets/images/backgrounds/practical-informations__header.jpg);
+}
+
+
+.logo{
+    position: absolute;
+    height: 10%;
+	width: 10%;
+    top: -27px;
+    left: 20px;
+    z-index: 3;
+}
+
+.shape_logo{
+    position: absolute;
+    height: 100px; 
+    width: 175px; 
+    top: 20px;
+    left: 20px;
+    border-radius: 50% 20% / 10% 40%;
+    background: aliceblue;
+    z-index: 2;
+}
+
+.choose{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 50px;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    bottom: -375px;
+}
+
+.choose_admin{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 50px;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    right: 10px;
+    top: 600px;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(144, 0, 255);
+}
+
