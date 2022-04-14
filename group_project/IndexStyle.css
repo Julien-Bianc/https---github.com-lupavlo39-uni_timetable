@@ -9,8 +9,23 @@ body{
 
 
 .logo{
-    font-size: xx-large;
-    color: aliceblue;
+    position: absolute;
+    height: 10%;
+	width: 10%;
+    top: -27px;
+    left: 20px;
+    z-index: 3;
+}
+
+.shape_logo{
+    position: absolute;
+    height: 100px; 
+    width: 175px; 
+    top: 20px;
+    left: 20px;
+    border-radius: 50% 20% / 10% 40%;
+    background: aliceblue;
+    z-index: 2;
 }
 
 .choose{
@@ -23,10 +38,10 @@ body{
     transition: all 0.3s ease;
     position: relative;
     text-align: center;
-    bottom: -250px;
+    bottom: -375px;
 }
 
-.adminarea{
+.choose_admin{
     font-size: 30px;
     font-weight: 500;
     padding: 5px 30px;
@@ -35,8 +50,8 @@ body{
     line-height: 50px;
     transition: all 0.3s ease;
     position: relative;
-    text-align: right;
-    bottom: -700px;
+    right: 10px;
+    top: 600px;
 }
 
 a {
